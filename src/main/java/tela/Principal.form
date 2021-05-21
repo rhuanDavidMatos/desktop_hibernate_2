@@ -124,8 +124,8 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="titulo" max="32767" attributes="0"/>
-              <Component id="painel_atalho" alignment="1" max="32767" attributes="0"/>
-              <Component id="rodape" alignment="1" max="32767" attributes="0"/>
+              <Component id="rodape" alignment="1" pref="818" max="32767" attributes="0"/>
+              <Component id="painel_atalho" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -180,7 +180,7 @@
                       <Component id="iconeNovoUsuario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="iconePesquisaUsuario" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="272" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -218,6 +218,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="ADD CALL"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="iconeNovoChamadoMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="iconePesquisaUsuario">
               <Properties>
@@ -239,7 +242,6 @@
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="iconeNovoUsuarioMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="iconeNovoUsuarioActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

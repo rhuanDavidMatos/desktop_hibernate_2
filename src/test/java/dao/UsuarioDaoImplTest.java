@@ -35,8 +35,7 @@ public class UsuarioDaoImplTest {
         usuario = new Usuario(
                 UtilGerador.gerarNome(),
                 UtilGerador.gerarEmail(),
-                "123456",
-                new Date());
+                "123456");
 
         sessao = HibernateUtil.abrirConexao();
         usuarioDao.salvarOuAlterar(usuario, sessao);

@@ -75,6 +75,11 @@ public class Principal extends javax.swing.JFrame {
 
         iconeNovoChamado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/META-INF.imagens/add_call_48.png"))); // NOI18N
         iconeNovoChamado.setText("ADD CALL");
+        iconeNovoChamado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconeNovoChamadoMouseClicked(evt);
+            }
+        });
 
         iconePesquisaUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/META-INF.imagens/pesquisa user.png"))); // NOI18N
         iconePesquisaUsuario.setText("SEARCH USER");
@@ -91,11 +96,6 @@ public class Principal extends javax.swing.JFrame {
                 iconeNovoUsuarioMouseClicked(evt);
             }
         });
-        iconeNovoUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iconeNovoUsuarioActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout painel_atalhoLayout = new javax.swing.GroupLayout(painel_atalho);
         painel_atalho.setLayout(painel_atalhoLayout);
@@ -110,7 +110,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(iconeNovoUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(iconePesquisaUsuario)
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painel_atalhoLayout.setVerticalGroup(
             painel_atalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,8 +129,8 @@ public class Principal extends javax.swing.JFrame {
         painel_principalLayout.setHorizontalGroup(
             painel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(painel_atalho, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(rodape, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(rodape, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+            .addComponent(painel_atalho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         painel_principalLayout.setVerticalGroup(
             painel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,20 +253,20 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_novo_usuarioActionPerformed
 
     private void iconePesquisaChamadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconePesquisaChamadoMouseClicked
-        new CadastroUsuario().setVisible(true);
+        new PesquisarChamado().setVisible(true);
     }//GEN-LAST:event_iconePesquisaChamadoMouseClicked
 
     private void iconePesquisaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconePesquisaUsuarioMouseClicked
-
+        new PesquisaUsuario().setVisible(true);
     }//GEN-LAST:event_iconePesquisaUsuarioMouseClicked
 
     private void iconeNovoUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconeNovoUsuarioMouseClicked
-        new CadastroChamado().setVisible(true);
+        new CadastroUsuario().setVisible(true);
     }//GEN-LAST:event_iconeNovoUsuarioMouseClicked
 
-    private void iconeNovoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iconeNovoUsuarioActionPerformed
-        new CadastroUsuario().setVisible(true);
-    }//GEN-LAST:event_iconeNovoUsuarioActionPerformed
+    private void iconeNovoChamadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconeNovoChamadoMouseClicked
+        new CadastroChamado().setVisible(true);
+    }//GEN-LAST:event_iconeNovoChamadoMouseClicked
 
     /**
      * @param args the command line arguments

@@ -256,11 +256,11 @@ public class PesquisaUsuario extends javax.swing.JFrame {
             dataFormatada = "-";
 
             if (usuario.getUltimo_acesso() != null) {
-                formatado.format(usuario.getUltimo_acesso());
+                dataFormatada = formatado.format(usuario.getUltimo_acesso());
 
             }
-            tabelaModelo.addRow(new Object[]{usuario.getNome(), usuario.getLogin(), ativo, usuario
-                .getPerfil().getNome(), dataFormatada});
+            tabelaModelo.addRow(new Object[]{usuario.getNome(), usuario.getLogin(), ativo, 
+                usuario.getPerfil().getNome(), dataFormatada});
         }
 
     }

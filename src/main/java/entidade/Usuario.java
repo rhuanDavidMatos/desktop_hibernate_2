@@ -48,12 +48,11 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(String nome, String login, String senha, Date ultimo_acesso) {
+    public Usuario(String nome, String login, String senha) {
         this.nome = nome;
         this.login = login;
         this.senha = senha;
         this.ativo = true;
-        this.ultimo_acesso = ultimo_acesso;
     }
 
     public Long getId() {
